@@ -4,7 +4,6 @@ import axios from "axios";
 import useAuth from "./hooks/useAuth";
 import Cookies from "js-cookie";
 
-
 function ValidateToken() {
   const { isAuthenticated, checkAuthStatus } = useAuth();
   const location = useLocation();
@@ -46,10 +45,10 @@ function ValidateToken() {
             // setCookie("userData");
             checkAuthStatus();
             // window.location.href= ""
-            window.location.href = "http://localhost:5173/welcome";
+            window.location.href = "https://jwt-task-2.vercel.app/welcome";
           } else {
             console.log("Invalid token");
-            window.location.href = "http://localhost:5173/";
+            window.location.href = "https://jwt-task-2.vercel.app/";
           }
         })
         .catch((error) => {
