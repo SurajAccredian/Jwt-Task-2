@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import useAuth from "./hooks/useAuth";
+import Cookies from "js-cookie";
+
 
 function ValidateToken() {
   const { isAuthenticated, checkAuthStatus } = useAuth();
@@ -39,8 +41,8 @@ function ValidateToken() {
         )
         .then((response) => {
           if (response.data.status === 200) {
-            const { data } = response.data;
-            const { firstname } = data;
+            // const { data } = response.data;
+            // const { firstname } = data;
             // setCookie("userData");
             checkAuthStatus();
             // window.location.href= ""
